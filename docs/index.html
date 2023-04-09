@@ -1,1 +1,136 @@
-<H1>Junior TM is in EFFECT!!!</H1>
+<html>
+    <head> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            * {
+                box-sizing: border-box;
+                padding: 0;
+                margin: 0;
+                color: white;
+                background: none;
+            }
+            /* Start of body */
+
+            body { /*container is responsible for placing and sizing its children except for body*/
+                display: flex;
+                width: 100vw; height: 100vh;
+                flex-direction: column;
+                justify-content: start;  
+                background-image: url('images/pexels-mike-1171084.jpg'); 
+                background-size: cover;
+              
+            }
+            body > * { /*decide on a display mode from the beginning*/
+                display: flex;
+            }
+            body > header { /*container is responsible for placing and sizing its children*/
+                height: 7.5%;
+            }
+            body > main{
+                height: 92.5%;
+            }
+           /* End of body */ 
+
+            /* Start of header */
+            header {
+                background-color: rgba(129, 0, 0, 0.5);
+                border-bottom: 1px black solid;
+                justify-content: center;
+                align-items: center;
+                font-size: 3em;
+            }
+            /* End of header */
+
+            /* Start of main */
+            main {
+                padding-top: 5%; padding-bottom: 5%;  
+               
+                flex-direction: column; justify-content: space-around; align-items: center;
+            }
+
+            main > section { /*container is responsible for placing and sizing its children*/
+                width: 70%; height: 35%;
+            }
+
+            main > section:nth-child(2){
+                height: 10%;
+                background-color: brown;
+            }
+            main > section:nth-child(2) > P{
+                display: none;
+            }
+             /* media query for a tag is located in the section for that tag and 
+               only applies to the tag it is affecting. It goes from is ordered from smaller
+               screen sizes to larger *******************************************************/
+            @media only screen and (min-width: 768px) {   
+                body > header { /*container is responsible for placing and sizing its children*/
+                    height: 15%;
+                }
+                header {
+                    border-bottom: 1px black solid;
+                    justify-content: space-around; 
+                    align-items: center;
+                    font-size: 3em;
+                }
+                main {
+                    flex-direction: row;
+                    justify-content:center; align-items: center;
+                }
+                main > h1 {
+                    text-align: center;
+                    font-size: 3em;
+                    max-width: 50%;
+                }
+                main > section { /*container is responsible for placing and sizing its children*/
+                    width: 25%; height: 50%;
+                }
+
+                main > section:nth-child(2){
+                    height: 50%;
+                }  
+                
+                main > section:nth-child(2) > P{
+                    display: flex;
+                }
+ 
+            }
+            /* End of main tag section*/
+
+            /* Start of section tag section */
+            section {
+                border-radius: 10%; border: 1px solid black;
+                display: flex; flex-direction: column; justify-content: center; align-items: center;
+                padding-left: 10%; padding-right: 10%;
+                font-size: 1em; color: white; text-align:justify; overflow: hidden;
+            }
+
+            @media only screen and (min-width: 768px) {
+                section {
+                    border-radius: 2%;
+                    padding-left: 2%; padding-right: 2%;
+                    background-color: orange;
+                    font-size: 1em; color: black;
+                    justify-content: space-around; 
+                }
+                
+                section > P {
+                    height:80%;
+                }
+            }
+            /* End of section */
+
+       </style>
+    </head>
+    
+    <body>
+        <header>
+            <A href="https://junior.ai/">Key Benefits</A>
+            <A href="https://junior.ai/">Features</A>
+            <A href="https://junior.ai/">Case Studies</A>
+
+        </header>
+        <main>
+          <h1>Revolutionize Your Software Development with JuniorTM's AI-Driven Virtual Developers</h1> 
+        </main>
+    </body>
+</html>
